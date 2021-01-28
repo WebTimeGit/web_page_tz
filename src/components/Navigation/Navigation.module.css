@@ -1,0 +1,9 @@
+.navLink {
+    font-size: 18px;
+    color: moccasin;
+    padding: 10px;
+    margin:  10px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
+}
