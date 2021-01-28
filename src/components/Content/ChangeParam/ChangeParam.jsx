@@ -1,5 +1,5 @@
 import React from "react";
-import modClass from "./ChangeParam.modul.css"
+import modClass from "./ChangeParam.module.css"
 
 const ChangeParam = () => {
    return (

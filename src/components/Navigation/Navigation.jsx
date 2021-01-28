@@ -14,7 +14,7 @@ const Navigation = () => {
             Registration
          </NavLink>
 
-         <NavLink to='/Content' className={modClass.navLink}>
+         <NavLink to='/content/change-parameters' className={modClass.navLink}>
             Content
          </NavLink>
 

@@ -1,3 +1,14 @@
+.main_wrapper {
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  grid-template-areas:
+		"header"
+		"main"
+		"footer";
+}
 
 .App-header {
   background-color: #282c34;
@@ -8,5 +19,25 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  grid-area: header;
 }
 
+.App-main {
+  grid-area: main;
+}
+
+.App-footer {
+  background-color: #282c34;
+  min-height: 80px;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  grid-area: footer;
+}
+
+.App-footer a {
+  color: bisque;
+  margin-left: 5px;
+}
