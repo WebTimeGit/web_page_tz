@@ -15,4 +15,8 @@
     margin: 10px;
     text-decoration: none;
 }
+.navLink.active {
+    background: #282c34;
+
+}
 
