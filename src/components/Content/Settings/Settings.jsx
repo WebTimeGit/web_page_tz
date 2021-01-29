@@ -31,7 +31,7 @@ const Settings = (props) => {
             </span>
             <input ref={inputOut} type="text"/>
          </label>
-         <button type={"button"} onClick={inputFunction}>Ввести</button>
+         <button type={"button"} onClick={inputFunction} className={modClass.settingBtn}>Ввести</button>
       </div>
    )
 }

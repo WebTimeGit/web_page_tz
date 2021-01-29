@@ -38,9 +38,9 @@ input {
     margin-top: 10px;
 }
 
-button {
-    width: 150px;
-    height: 40px;
+.settingBtn {
+    width: 80%;
+    height: 50px;
     border-radius: 5px;
     border: initial;
     background: #6C7145;
@@ -48,5 +48,6 @@ button {
     margin: auto;
     font-size: 22px;
     font-weight: 700;
+    color: lightgray;
     cursor: pointer;
 }

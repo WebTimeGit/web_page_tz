@@ -32,6 +32,7 @@ p {
 }
 
 .labelCheckBox {
+    margin-top: 20px;
     display: flex;
     align-items: center;
     height: 30px;
