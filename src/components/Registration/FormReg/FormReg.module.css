@@ -2,7 +2,8 @@
     width: 500px;
     margin: auto;
     padding: 20px;
-    background: palevioletred;
+    background: #887153;
+    box-sizing: border-box;
 }
 
 p {
@@ -16,20 +17,23 @@ p {
     font-size: 18px;
     font-weight: 700;
     text-indent: 15px;
+    box-sizing: border-box;
 }
 
 .btnWr {
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
 }
 
 .pageBtn {
-    margin: 10px auto;
     padding: 15px 15px;
     cursor: pointer;
     font-size: 18px;
     font-weight: 700;
     color: #282C34;
-    background: aliceblue;
+    background: lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,4 +41,7 @@ p {
     text-transform: uppercase;
     border: initial;
     border-radius: 5px;
+    width: initial;
+    height: initial;
+    margin: initial;
 }

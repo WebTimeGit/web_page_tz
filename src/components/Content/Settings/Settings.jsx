@@ -28,7 +28,6 @@ const Settings = (props) => {
          <label>
             <span>
                Поле ввывода текста
-               <span>localStorage = {localStorage.getItem('inputIn') ? localStorage.getItem('inputIn') : 'пусто'}</span>
             </span>
             <input ref={inputOut} type="text"/>
          </label>

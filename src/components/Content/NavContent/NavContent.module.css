@@ -2,8 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: palevioletred;
+    background: #887153;
     color: #282c34;
+    box-sizing: border-box;
 }
 
 .navLink {

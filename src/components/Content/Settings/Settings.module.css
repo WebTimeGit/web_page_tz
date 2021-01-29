@@ -1,10 +1,12 @@
 .wrapper {
     padding: 20px;
     max-width: 500px;
-    margin: auto;
+    margin: 20px auto 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-sizing: border-box;
+    border: 2px solid #282C34;
 }
 
 label {
@@ -13,12 +15,17 @@ label {
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 20px;
+
 }
 
 span {
     display: block;
     text-align: center;
-    margin-bottom: 5px;
+}
+
+label > span:first-child {
+    background: #6C7145;
+    padding: 10px 0;
 }
 
 input {
@@ -27,11 +34,16 @@ input {
     padding: 0 20px;
     font-size: 22px;
     font-weight: 700;
+    box-sizing: border-box;
+    margin-top: 10px;
 }
 
 button {
     width: 150px;
     height: 40px;
+    border-radius: 5px;
+    border: initial;
+    background: #6C7145;
     display: block;
     margin: auto;
     font-size: 22px;

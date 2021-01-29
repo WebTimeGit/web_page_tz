@@ -4,9 +4,17 @@ import modClass from "./OutputUsers.module.css"
 
 const OutputUsers = (props) => {
 
-   let users = props.allUsers.map( user => {
+   let users = props.allUsers.map(user => {
       return (
-         <UserItem fullName={user.fullName} position={user.position} phone={user.phone} login={user.login} password={user.password} />
+         <UserItem fullName={user.fullName} position={user.position} phone={user.phone} login={user.login}
+                   password={user.password}/>
+      )
+   })
+
+   let users2 = JSON.parse(localStorage.getItem('users')).map(user2 => {
+      return (
+         <UserItem fullName={user2.fullName} position={user2.position} phone={user2.phone} login={user2.login}
+                   password={user2.password}/>
       )
    })
 
@@ -21,7 +29,14 @@ const OutputUsers = (props) => {
                <td>Пароль</td>
             </tr>
          </thead>
-         {users}
+         <tbody>
+            <tr><td>Данные из state</td></tr>
+            {users}
+         </tbody>
+         <tfoot>
+         <tr><td>Данные из localStorage</td></tr>
+            {users2}
+         </tfoot>
       </table>
    )
 }

@@ -3,6 +3,7 @@
     width: 100%;
     margin: 10px 0;
     font-weight: 700;
+    box-sizing: border-box;
 }
 td {
     padding: 5px 10px;

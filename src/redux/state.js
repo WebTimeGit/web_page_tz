@@ -35,8 +35,9 @@ export let state = {
 
 let newData = state.contentPage.allUsers;
 
+localStorage.setItem(`users`, JSON.stringify(newData))
 for (let i = 0; i < newData.length; i++ ) {
-   localStorage.setItem(`users${i}`, JSON.stringify(newData[i]))
+
    console.log(newData[i].login);
    console.log(newData[i].password);
 }
