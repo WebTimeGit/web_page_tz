@@ -5,7 +5,7 @@ import modClass from "./ChangeParamForm.module.css";
 
 const ChangeParamForm = () => {
    return (
-      <form action="#" className={modClass.registration}>
+      <form action="#" className={modClass.changeParamForm}>
          <p>
             <input type="text" placeholder="ФИО" className={modClass.input}/>
          </p>
