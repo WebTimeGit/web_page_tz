@@ -50,7 +50,6 @@ export let updateInputValue = (inputValue) => {
    let newInputValue = {
       inputIn: inputValue
    }
-
    state.contentPage.settings.push(newInputValue);
    localStorage.setItem('inputIn', `${newInputValue.inputIn}`);
    rerenderEntireDOM(state);

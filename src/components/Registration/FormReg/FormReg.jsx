@@ -27,7 +27,7 @@ const FormReg = () => {
 
          <div className={modClass.btnWr}>
             <button type="submit" className={modClass.pageBtn}>
-               Регистрация
+               Зарегистрироваться
             </button>
             <NavLink exact to='/' className={modClass.pageBtn}>
                назад

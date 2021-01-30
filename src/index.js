@@ -1,7 +1,5 @@
-import React from 'react';
 import state from "./redux/state";
 import './index.css';
-
 import reportWebVitals from './reportWebVitals';
 import {rerenderEntireDOM} from './render';
 
