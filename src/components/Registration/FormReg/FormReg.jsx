@@ -9,7 +9,6 @@ const FormReg = () => {
          <p>
             <input type="text" placeholder="ФИО" className={modClass.input}/>
          </p>
-
          <p>
             <input type="text" placeholder="Должность" className={modClass.input}/>
          </p>
@@ -25,6 +24,7 @@ const FormReg = () => {
          <p>
             <input type="password" placeholder="Подтверждение пароля" className={modClass.input}/>
          </p>
+
          <div className={modClass.btnWr}>
             <button type="submit" className={modClass.pageBtn}>
                Регистрация

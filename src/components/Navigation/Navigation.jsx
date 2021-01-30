@@ -6,6 +6,7 @@ import modClass from "./Navigation.module.css"
 const Navigation = () => {
    return (
       <nav>
+         <i>Developer navigation</i>
          <NavLink exact to='/' className={modClass.navLink}>
             Login
          </NavLink>
@@ -24,6 +25,5 @@ const Navigation = () => {
       </nav>
    )
 }
-
 
 export default Navigation;

@@ -1,4 +1,5 @@
 import {rerenderEntireDOM} from '../render';
+// Main database
 export let state = {
    contentPage: {
       changeParametersPage: [],
@@ -33,8 +34,8 @@ export let state = {
    }
 }
 
+// Select login and password from the database and writing to localStorage
 let newData = state.contentPage.allUsers;
-
 localStorage.setItem(`users`, JSON.stringify(newData))
 for (let i = 0; i < newData.length; i++ ) {
 
@@ -42,6 +43,7 @@ for (let i = 0; i < newData.length; i++ ) {
    console.log(newData[i].password);
 }
 
+//function for setting, writing value inputIn in state and save in localStorage, render entire DOM
 export let updateInputValue = (inputValue) => {
    state.contentPage.settings = [];
 

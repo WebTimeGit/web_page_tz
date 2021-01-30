@@ -1,8 +1,6 @@
 import React from "react";
 import FormReg from "./FormReg/FormReg";
-
 import modClass from "./Registration.module.css";
-
 
 const Registration = () => {
    return (
