@@ -1,3 +1,9 @@
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+
 .navLink {
     font-size: 18px;
     color: moccasin;

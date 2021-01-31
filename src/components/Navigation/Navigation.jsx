@@ -5,8 +5,12 @@ import modClass from "./Navigation.module.css"
 
 const Navigation = () => {
    return (
-      <nav>
-         <i>Developer navigation</i>
+      <nav className={modClass.nav}>
+         <i>
+            Developer panel <br/>
+            login: Petrov <br/>
+            password: 88888888 <br/>
+         </i>
          <NavLink exact to='/' className={modClass.navLink}>
             Login
          </NavLink>
