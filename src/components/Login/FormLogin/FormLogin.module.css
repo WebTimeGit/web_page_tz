@@ -41,7 +41,7 @@ p {
     cursor: pointer;
 }
 
-#remove_input__checkbox {
+#checkbox {
     opacity: 0;
     width: initial;
 }
@@ -70,7 +70,7 @@ p {
     transition: all 0.3s ease;
 }
 
-#remove_input__checkbox:checked ~ .new_checkbox::after {
+#checkbox:checked ~ .new_checkbox::after {
     transform: scale(1);
     transition: all 0.3s ease;
 }
