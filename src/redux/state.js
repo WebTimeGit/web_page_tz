@@ -2,16 +2,11 @@ import {rerenderEntireDOM} from '../render';
 // Main database
 export let state = {
    loginPage: {
-      adminData: [
+      adminData:
          {
-            login: 'Petrov',
-            password: '88888888'
-         },
-         {
-            login: 'Ivanov',
-            password: '7777777'
-         },
-      ]
+            login: 'Andrey',
+            password: '999999999'
+         }
    },
    contentPage: {
       changeParametersPage: [],
@@ -47,16 +42,26 @@ export let state = {
 }
 
 let adminData = state.loginPage.adminData;
-
-localStorage.setItem(`adminData`, JSON.stringify(adminData))
-
-// Select login and password from the database and writing to localStorage
 let newData = state.contentPage.allUsers;
-localStorage.setItem(`users`, JSON.stringify(newData))
-for (let i = 0; i < newData.length; i++) {
-   //
-   // console.log(newData[i].login);
-   // console.log(newData[i].password);
+
+// Enter login form
+export let enterLogin = (logEnter, history) => {
+
+   if (adminData.login === logEnter.login && adminData.password === logEnter.password) {
+      return history.push('/content/change-parameters')
+   } else {
+      history.push('/registration')
+   }
+
+   for (let i = 0; i < newData.length; i++) {
+      if (newData[i].login === logEnter.login && newData[i].password === logEnter.password) {
+         console.log(newData[i]);
+         return history.push('/content/change-parameters');
+
+      } else {
+         history.push('/registration')
+      }
+   }
 }
 
 //function for setting, writing value inputIn in state and save in localStorage, render entire DOM

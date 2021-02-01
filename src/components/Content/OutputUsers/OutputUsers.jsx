@@ -15,16 +15,20 @@ const OutputUsers = (props) => {
       )
    })
 
-   // Object localStorage
-   let users2 = JSON.parse(localStorage.getItem('users')).map(user2 => {
-      return (
-         <UserItem fullName={user2.fullName}
-                   position={user2.position}
-                   phone={user2.phone}
-                   login={user2.login}
-                   password={user2.password}/>
-      )
-   })
+   let users2;
+
+   if (localStorage.getItem('usersLocal')) {
+      // Object localStorage
+      users2 = JSON.parse(localStorage.getItem('usersLocal')).map(user2 => {
+         return (
+            <UserItem fullName={user2.fullName}
+                      position={user2.position}
+                      phone={user2.phone}
+                      login={user2.login}
+                      password={user2.password}/>
+         )
+      })
+   }
 
    return (
       <table className={modClass.wrapper}>

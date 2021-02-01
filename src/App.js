@@ -17,9 +17,12 @@ function App(props) {
                <Navigation />
             </header>
             <main className={"App-main"}>
-               <Route exact path='/' render={() => <Login />} />
+               <Route exact path='/' render={() => <Login enterLogin={props.enterLogin} />} />
                <Route path='/registration' render={() => <Registration />} />
-               <Route path='/content' render={()=> <Content contentPage={props.state.contentPage} updateInputValue={props.updateInputValue} />} />
+               <Route path='/content' render={()=> <Content
+                  contentPage={props.state.contentPage}
+                  updateInputValue={props.updateInputValue}
+               />} />
             </main>
             <footer className={"App-footer"}>
                © 2021 developed <a href="https://www.youtube.com/channel/UCQjaaguXDBR3ZmJbIE3P0TQ" target="_blank" >Web Time</a>

@@ -1,66 +1,48 @@
 import React from "react";
-import {useHistory} from 'react-router-dom';
 import modClass from "./FormLogin.module.css";
+import {useHistory} from "react-router";
 
 
 // noinspection JSUnresolvedVariable
-const FormLogin = () => {
+const FormLogin = (props) => {
 
-   const history = useHistory()
+   let history = useHistory();
 
    let logLogin = React.createRef();
    let logPass = React.createRef();
    let logRememberMe = React.createRef();
 
-   const vfvf = () => {
-      console.log(logLogin.current.value)
-   }
-
-   const assa = () => {
-      console.log(logPass.current.value)
-   }
-
    const changeChecked = (e) => {
       const inputCheck = e.target;
       const logRememberMe = inputCheck.type === 'checkbox' ? inputCheck.checked : inputCheck.value;
       localStorage.setItem('logRememberMe', logRememberMe);
-
+      console.log(logRememberMe)
    };
 
+   const handleFormSubmit = () => {
 
-   const handleFormSubmit = (e) => {
-      e.preventDefault();
-      let adminData = JSON.parse(localStorage.getItem("adminData"));
-      let logLoginValue = logLogin.current.value;
-      let logPassValue = logPass.current.value;
+      let logEnter = {
+         login: logLogin.current.value,
+         password: logPass.current.value
+      };
 
-      for (let a = 0; a < adminData.length; a++) {
-         let getLogin = adminData[a].login
-         let getPass = adminData[a].password
-
-         if ((logLoginValue === getLogin && logPassValue === getPass))  {
-            history.push('/content/change-parameters')
-         } else {
-            history.push('/registration')
-         }
-      }
-
+      props.enterLogin(logEnter, history)
    };
 
    return (
       <form action="#" className={modClass.enter}>
          <p>
-            <input ref={logLogin} type={"text"} onChange={vfvf} placeholder={"Логин"} className={modClass.input}/>
+            <input ref={logLogin} type={"text"} placeholder={"Логин"} className={modClass.input}/>
          </p>
          <p>
-            <input ref={logPass} type={"password"} onChange={assa} placeholder={"ввести пароль"} className={modClass.input}/>
+            <input ref={logPass} type={"password"} placeholder={"ввести пароль"} className={modClass.input}/>
          </p>
 
          <label htmlFor={modClass.checkbox} className={modClass.labelCheckBox}>
             <input ref={logRememberMe} type={"checkbox"} onChange={changeChecked} id={modClass.checkbox}
-                   className={modClass.checkBox}/>
+                   className={modClass.not}/>
             <span className={modClass.new_checkbox}/>
-            Remember me
+            Remember me <span className={modClass.not}> не реализовал</span>
          </label>
 
          <button type={"submit"} onClick={handleFormSubmit} className={modClass.pageBtn}>

@@ -74,3 +74,9 @@ p {
     transform: scale(1);
     transition: all 0.3s ease;
 }
+
+.not {
+    font-weight: 700;
+    color: darkred;
+    margin-left: 5px;
+}
