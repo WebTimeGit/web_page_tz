@@ -34,7 +34,7 @@ const FormReg = () => {
 
 
    return (
-      <form action="#" className={modClass.registration}>
+      <form action="#" className={modClass.registration} >
          <p>
             <input ref={regFullName} type="text" placeholder="ФИО" className={modClass.input}/>
          </p>
