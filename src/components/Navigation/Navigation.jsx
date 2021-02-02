@@ -9,7 +9,7 @@ const Navigation = () => {
          <i>
             Developer panel <br/>
             login: Andrey <br/>
-            password: 999999999 <br/>
+            password: Хочу работу) <br/>
          </i>
          <NavLink exact to='/' className={modClass.navLink}>
             Login

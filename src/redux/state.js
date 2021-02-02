@@ -5,7 +5,7 @@ export let state = {
       adminData:
          {
             login: 'Andrey',
-            password: '999999999'
+            password: 'Хочу работу)'
          }
    },
    contentPage: {
